@@ -13,3 +13,6 @@
 - Docs: architecture, ffi-explained, physics-kernels, coarrays-and-tilt, learning-path, strategy, roadmap, handoff, api-reference, performance-notes, glossary, advanced-fortran, integration-guide, limitations-and-future, exercises-advanced
 - CI workflow (gfortran build + test)
 - Scripts (build_shared, run_all_examples, check_docs)
+
+## Unreleased
+- Continuous improvements
