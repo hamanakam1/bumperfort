@@ -1,6 +1,6 @@
 # Architecture
 
-## Big Picture
+## System Diagram (ASCII)
 
 ```
                     ┌──────────────────────────────┐
@@ -25,6 +25,17 @@
 │  │ (TILT)      │                       └─────────────────┘  │
 │  └─────────────┘                                            │
 └─────────────────────────────────────────────────────────────┘
+```
+
+## System Diagram (Mermaid)
+
+```mermaid
+flowchart LR
+  O[Orchestrator / Python] -->|pointer+length| F[ffi_mod Launch Chute]
+  F --> P[physics_mod Bumpers]
+  P --> I[index_mod top-k]
+  F --> T[coarray + telemetry TILT]
+  I --> R[Score + TILT flag]
 ```
 
 ## Pinball Flow
