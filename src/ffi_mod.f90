@@ -15,6 +15,18 @@ module ffi_mod
     integer(c_int64_t) :: seq
   end type match_receipt_t
 
+  type, bind(C), public :: panther_intent_t
+    real(c_double) :: vec(1536)
+    integer(c_int64_t) :: ts
+    character(kind=c_char, len=32) :: source
+  end type panther_intent_t
+
+  type, bind(C), public :: agent_dispatch_t
+    character(kind=c_char, len=32) :: model_id
+    character(kind=c_char, len=32) :: execution_stack
+    integer(c_int64_t) :: era_seq
+  end type agent_dispatch_t
+
   public :: bumper_cosine_c
   public :: bumper_batch_cosine_c
   public :: bumper_version_c
