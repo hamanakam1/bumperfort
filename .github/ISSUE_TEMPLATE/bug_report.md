@@ -1,12 +1,12 @@
 ---
 name: Bug report
-about: Report a bug
-title: "[bug] "
-labels: bug
+about: Create a report to help us improve
 ---
+**Describe the bug**
+A clear and concise description.
 
-## Description
-## Steps to reproduce
-## Expected
-## Actual
-## Environment
+**To Reproduce**
+Steps to reproduce.
+
+**Expected behavior**
+What you expected.
