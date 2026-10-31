@@ -8,6 +8,12 @@ typedef struct {
     float *data;
 } plunger_payload_t;
 
+typedef struct {
+    long long hash;
+    double coord[3];
+    long long seq;
+} match_receipt_t;
+
 #ifdef __cplusplus
 extern "C" {
 #endif

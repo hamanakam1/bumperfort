@@ -66,3 +66,8 @@ MIT © 2026 Mike Hamanaka
 ## Contributing
 
 Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/contributing-ideas.md](docs/contributing-ideas.md). Good first issues are labeled. Educational contributions are especially valued.
+
+
+## Arcade Cabinet Specs (Benchmarks)
+
+Run `make test-leaks` to verify zero heap allocations after initialization.

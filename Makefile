@@ -7,3 +7,7 @@ test:
 	$(FC) $(FFLAGS) -o test_bounce test/test_bounce.f90 $(SRC) && ./test_bounce
 leaks:
 	leaks --atExit -- ./bumperfort || true
+
+test-leaks:
+	$(FC) $(FFLAGS) -o bumperfort $(SRC)
+	leaks --atExit -- ./bumperfort || true

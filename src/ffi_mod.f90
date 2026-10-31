@@ -9,6 +9,12 @@ module ffi_mod
     type(c_ptr)       :: data
   end type plunger_payload_t
 
+  type, bind(C), public :: match_receipt_t
+    integer(c_int64_t) :: hash
+    real(c_double)     :: coord(3)
+    integer(c_int64_t) :: seq
+  end type match_receipt_t
+
   public :: bumper_cosine_c
   public :: bumper_batch_cosine_c
   public :: bumper_version_c
