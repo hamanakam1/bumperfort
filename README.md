@@ -18,6 +18,8 @@
 
 ## Bounce Kernel
 
+Uses Accelerate/AMX on macOS with 64-byte cache alignment.
+
 High-dimensional vector bounce calculations using real64 precision, with deterministic trajectories.
 
 ## Visual Flow
