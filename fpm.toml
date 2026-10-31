@@ -1,0 +1,26 @@
+name = "bumperfort"
+version = "0.1.0"
+license = "MIT"
+author = "Mike Hamanaka"
+maintainer = "hamanakam1"
+copyright = "2026 Mike Hamanaka"
+description = "High-velocity vector physics and telemetry trajectory engine for local AI software factories."
+homepage = "https://github.com/hamanakam1/bumperfort"
+keywords = ["fortran", "vector", "cosine", "simd", "coarray", "local-first", "ai"]
+
+[build]
+auto-executables = true
+auto-tests = true
+auto-examples = true
+
+[library]
+source-dir = "src"
+
+[install]
+library = true
+
+[dependencies]
+# none for v0.1 – keep it pure
+
+[dev-dependencies]
+# optional later: test-drive, etc.

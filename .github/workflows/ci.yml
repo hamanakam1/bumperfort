@@ -1,0 +1,16 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        compiler: [gfortran, ifx]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install fpm
+        run: pip install fpm
+      - name: Build
+        run: fpm build
+      - name: Test
+        run: fpm test
