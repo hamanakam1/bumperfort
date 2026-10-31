@@ -58,3 +58,7 @@ v0.1.0 — educational + usable core. See `docs/limitations-and-future.md`.
 ## License
 
 MIT © 2026 Mike Hamanaka
+
+## Contributing
+
+Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/contributing-ideas.md](docs/contributing-ideas.md). Good first issues are labeled. Educational contributions are especially valued.
