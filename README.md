@@ -7,22 +7,15 @@
 ██╔══██╗██║   ██║██║╚██╔╝██║██╔═══╝ ██╔══╝  ██╔══██╗██╔══╝  ██║   ██║██╔══██╗   ██║   
 ██████╔╝╚██████╔╝██║ ╚═╝ ██║██║     ███████╗██║  ██║██║     ╚██████╔╝██║  ██║   ██║   
 ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
-
-        High-Velocity Vector Physics & Trajectory Engine
-        for the Local-First Industrial Software Factory
 ```
 
-**High-Velocity Vector Physics & Trajectory Engine**  
-for the Local-First Industrial Software Factory
+**High-Velocity Vector Physics & Trajectory Engine** for the Local-First Industrial Software Factory
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Fortran](https://img.shields.io/badge/Fortran-2018%2F2023-blue)](https://fortran-lang.org)
-[![fpm](https://img.shields.io/badge/build-fpm-purple)](https://fpm.fortran-lang.org)
 
-## What it is
+## Vision
 
-A Modern Fortran physics coprocessor that treats agent embeddings and hardware telemetry as physical objects.  
-Launch → Bump → Multi-ball → TILT → Score.
+BumperFort is a Modern Fortran physics coprocessor that treats agent embeddings and hardware telemetry as physical objects. Launch → Bump → Multi-ball → TILT → Score.
 
 ## Quick start
 
@@ -34,14 +27,22 @@ fpm test
 fpm run --example single_query
 ```
 
-## Architecture
+## Learning path
 
-See `docs/architecture.md`
+See `docs/learning-path.md` for the staged study guide. Start with `docs/architecture.md` and `docs/ffi-explained.md`.
 
 ## Status
 
-v0.1.0 – core physics + FFI surface working.  
-Coarray TILT and blocked top-k in progress.
+v0.1.0 — educational + usable core. See `docs/limitations-and-future.md`.
+
+## Links
+
+- Architecture: `docs/architecture.md`
+- FFI deep dive: `docs/ffi-explained.md`
+- Physics kernels: `docs/physics-kernels.md`
+- Coarrays & TILT: `docs/coarrays-and-tilt.md`
+- Strategy: `docs/strategy.md`
+- Roadmap: `docs/roadmap.md`
 
 ## License
 
