@@ -1,6 +1,7 @@
 module telemetry_mod
   use precision_mod
   use coarray_mod
+  use ringbuf_mod
   implicit none
   private
   public :: update_telemetry, check_tilt_status
@@ -13,6 +14,18 @@ contains
       call raise_tilt()
     end if
   end subroutine update_telemetry
+
+  subroutine check_nan_tilt(vec)
+    real(wp), intent(in) :: vec(:)
+    integer :: i
+    do i = 1, size(vec)
+      if (vec(i) /= vec(i)) then
+        call rb_push("TILT: NaN detected")
+        call raise_tilt()
+        return
+      end if
+    end do
+  end subroutine check_nan_tilt
 
   function check_tilt_status() result(is_tilted)
     logical :: is_tilted
