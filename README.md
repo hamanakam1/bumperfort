@@ -15,6 +15,15 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+
+## Visual Flow
+
+![Launch Chute](docs/images/gifs/01_launch_chute.gif)
+![Bumpers](docs/images/gifs/02_bumpers_physics.gif)
+![Multi-Ball](docs/images/gifs/03_multiball_coarrays.gif)
+![TILT](docs/images/gifs/04_tilt_monitor.gif)
+![Full Flow](docs/images/gifs/05_full_flow.gif)
+
 ## Vision
 
 BumperFort is a Modern Fortran physics coprocessor that treats agent embeddings and hardware telemetry as physical objects. Launch → Bump → Multi-ball → TILT → Score.
