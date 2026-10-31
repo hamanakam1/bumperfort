@@ -6,7 +6,7 @@
 typedef struct {
     size_t dim;
     float *data;
-} bumperfort_vector_t;
+} plunger_payload_t;
 
 #ifdef __cplusplus
 extern "C" {
