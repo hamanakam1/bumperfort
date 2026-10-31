@@ -1,0 +1,39 @@
+# Glossary
+
+- **zero-copy**: sharing memory between languages without duplicating data.
+- **assumed-shape**: Fortran array dummy argument whose shape is taken from the actual argument (`a(:)`).
+- **BIND(C)**: Fortran procedure attribute exposing C linkage.
+- **coarray image**: a parallel execution unit in Fortran coarrays.
+- **pure procedure**: side-effect-free function/subroutine.
+- **kind parameter**: integer selecting a numeric representation (real32/real64).
+- **fused kernel**: single pass computing multiple quantities (dot + norms).
+- **TILT**: hardware safety monitor raising a global flag.
+- **wp**: working precision parameter (default real32).
+- **c_ptr / c_f_pointer**: iso_c_binding tools for pointer interop.
+- **do concurrent**: compiler hint for independent iterations.
+- **contiguous**: array elements stored without gaps (required for FFI).
+- **column-major**: Fortran's default storage order (first index varies fastest).
+- **fpm**: Fortran Package Manager (build/test tool).
+- **SIMD**: Single Instruction Multiple Data (vector instructions).
+- **top-k**: selecting the k highest scores and their indices.
+- **coarray [*]**: codimension declaring one copy per image.
+- **sync all**: barrier synchronizing all coarray images.
+- **ISO_C_BINDING**: Fortran module for C interop.
+- **allocatable**: Fortran array that can be (re)allocated.
+- **assumed-size**: array with last dimension `*` (C-style).
+- **ABI**: Application Binary Interface (calling convention).
+- **FFI**: Foreign Function Interface.
+- **local-first**: no network, no cloud dependency.
+- **progressive parallelism**: single-image works; multi-image is opt-in.
+- **side effect**: modifying state outside the procedure.
+- **register pressure**: using too many CPU registers.
+- **cache locality**: keeping accessed data close in memory.
+- **early exit**: stopping computation once result is determined.
+- **coarse quantizer**: approximate first-pass filter (future).
+- **ring buffer**: fixed-size circular buffer for streaming (future).
+- **thermal throttle**: reducing work under heat (future TILT policy).
+- **semantic versioning**: versioning by breaking/feature/fix changes.
+- **deprecation window**: period before removing an API.
+- **phone-home**: sending data to external services (non-goal).
+- **benevolent dictatorship**: single maintainer governance.
+- **metaphor as governance**: using pinball metaphor to guide decisions.
