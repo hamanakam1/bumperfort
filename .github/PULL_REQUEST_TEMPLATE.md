@@ -1,7 +1,6 @@
-## Summary
-## Changes
-## Tests
+## Description
+Brief description of changes.
+
 ## Checklist
-- [ ] fpm build passes
-- [ ] fpm test passes
-- [ ] Docs updated if needed
+- [ ] Tests pass
+- [ ] Docs updated
