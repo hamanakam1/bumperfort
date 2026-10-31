@@ -16,6 +16,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 
+## Bounce Kernel
+
+High-dimensional vector bounce calculations using real64 precision, with deterministic trajectories.
+
 ## Visual Flow
 
 ![Launch Chute](docs/images/gifs/01_launch_chute.gif)
