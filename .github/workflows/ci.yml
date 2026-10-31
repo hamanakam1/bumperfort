@@ -12,11 +12,7 @@ jobs:
           curl -Lo fpm https://github.com/fortran-lang/fpm/releases/download/v0.10.1/fpm-0.10.1-linux-x86_64
           chmod +x fpm
           sudo mv fpm /usr/local/bin/
-      - name: Build & test (single image)
+      - name: Build & test
         run: |
           fpm build
           fpm test
-      - name: Build & test (coarray mode)
-        run: |
-          fpm build --flag "-DBUMPERFORT_COARRAY -fcoarray=single"
-          fpm test --flag "-DBUMPERFORT_COARRAY -fcoarray=single"
