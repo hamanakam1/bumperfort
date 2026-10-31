@@ -22,6 +22,21 @@ contains
     real(c_wp) :: score
     real(wp), pointer :: a(:), b(:)
 
+    if (.not. c_associated(a_ptr)) then
+      write(*,'(A)') 'bumperfort: null pointer a_ptr'
+      score = 0.0_c_wp
+      return
+    end if
+    if (.not. c_associated(b_ptr)) then
+      write(*,'(A)') 'bumperfort: null pointer b_ptr'
+      score = 0.0_c_wp
+      return
+    end if
+    if (n == 0) then
+      write(*,'(A)') 'bumperfort: zero dimension'
+      score = 0.0_c_wp
+      return
+    end if
     if (c_associated(a_ptr) .and. c_associated(b_ptr) .and. n > 0) then
       call c_f_pointer(a_ptr, a, [n])
       call c_f_pointer(b_ptr, b, [n])
