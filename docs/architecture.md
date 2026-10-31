@@ -93,3 +93,7 @@ flowchart LR
 ### bumperfort — public facade
 - Role: umbrella module re-exporting the public API.
 - Why: one `use bumperfort` for consumers.
+
+## Memory Flow
+
+Fortran (Bumperfort) -> C-ABI -> Go (LineasFlows) via shared memory ring buffer (raw binary structs, no serialization).
