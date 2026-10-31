@@ -1,0 +1,16 @@
+name: Edge Build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install gfortran
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gfortran
+      - name: Build & test
+        run: |
+          gfortran -O3 -ffast-math -c src/*.f90
+          gfortran -O3 -ffast-math -o test_bounce test/test_bounce.f90 src/*.f90
+          ./test_bounce

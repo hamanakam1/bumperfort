@@ -1,0 +1,8 @@
+[Unit]
+Description=Bumperfort daemon
+After=network.target
+[Service]
+ExecStart=/usr/local/bin/bumperfort
+Restart=always
+[Install]
+WantedBy=multi-user.target
