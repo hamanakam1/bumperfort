@@ -1,18 +1,15 @@
-module test_physics
-  use precision_mod
+program test_physics
+  use precision_mod, only: wp
   use physics_mod
   implicit none
-contains
-  subroutine run_tests()
-    real(wp) :: a(3), b(3)
-    a = [1.0, 0.0, 0.0]
-    b = [1.0, 0.0, 0.0]
-    if (abs(cosine_similarity(a,b) - 1.0) > 1e-6) error stop "cosine fail"
-    print *, "physics tests passed"
-  end subroutine run_tests
-end module test_physics
 
-program test_physics_driver
-  use test_physics
-  call run_tests()
-end program test_physics_driver
+  real(wp) :: a(4), b(4), c
+  a = [1.0_wp, 0.0_wp, 0.0_wp, 0.0_wp]
+  b = [1.0_wp, 0.0_wp, 0.0_wp, 0.0_wp]
+  c = fused_cosine(a, b)
+
+  if (abs(c - 1.0_wp) > 1.0e-6_wp) then
+    error stop "test_physics failed: expected cosine ~ 1.0"
+  end if
+  print *, "test_physics PASSED"
+end program test_physics

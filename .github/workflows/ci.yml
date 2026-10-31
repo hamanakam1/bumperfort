@@ -3,14 +3,16 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        compiler: [gfortran, ifx]
     steps:
       - uses: actions/checkout@v4
-      - name: Install fpm
-        run: pip install fpm
-      - name: Build
-        run: fpm build
-      - name: Test
-        run: fpm test
+      - name: Install gfortran & fpm
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gfortran
+          curl -Lo fpm https://github.com/fortran-lang/fpm/releases/download/v0.10.1/fpm-0.10.1-linux-x86_64
+          chmod +x fpm
+          sudo mv fpm /usr/local/bin/
+      - name: Build & test
+        run: |
+          fpm build
+          fpm test
