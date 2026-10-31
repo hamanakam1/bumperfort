@@ -17,3 +17,7 @@ build/
 __pycache__/
 *.pyc
 .venv/
+
+# VHS / GIFs (generated)
+*.gif
+*.tape
