@@ -18,11 +18,11 @@
 
 ## Visual Flow
 
-![Launch Chute](docs/images/launch-chute.svg)
-![Bumpers](docs/images/bumpers-closeup.svg)
-![Multi-Ball](docs/images/multi-ball.svg)
-![TILT](docs/images/tilt-sensor.svg)
-![Full Flow](docs/images/full-playfield-diagram.svg)
+![Launch Chute](docs/images/gifs/01_launch_chute.gif)
+![Bumpers](docs/images/gifs/02_bumpers_physics.gif)
+![Multi-Ball](docs/images/gifs/03_multiball_coarrays.gif)
+![TILT Monitor](docs/images/gifs/04_tilt_monitor.gif)
+![Full Flow](docs/images/gifs/05_full_flow.gif)
 
 ## Vision
 
