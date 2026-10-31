@@ -3,6 +3,11 @@
 
 #include <stddef.h>
 
+typedef struct {
+    size_t dim;
+    float *data;
+} bumperfort_vector_t;
+
 #ifdef __cplusplus
 extern "C" {
 #endif

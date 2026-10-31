@@ -4,6 +4,11 @@ module ffi_mod
   implicit none
   private
 
+  type, bind(C), public :: bumperfort_vector_t
+    integer(c_size_t) :: dim
+    type(c_ptr)       :: data
+  end type bumperfort_vector_t
+
   public :: bumper_cosine_c
   public :: bumper_batch_cosine_c
   public :: bumper_version_c
