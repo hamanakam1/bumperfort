@@ -1,5 +1,9 @@
 FC ?= gfortran
 FFLAGS ?= -O3 -ffast-math -fcoarray=single
+UNAME := $(shell uname -s)
+ifeq ($(UNAME),Darwin)
+  LDFLAGS += -framework Accelerate
+endif
 SRC := $(wildcard src/*.f90)
 all:
 	$(FC) $(FFLAGS) -o bumperfort $(SRC)
