@@ -20,9 +20,27 @@
 
 ## Bounce Kernel
 
-Uses Accelerate/AMX on macOS with 64-byte cache alignment.
+Supports hot ROM swaps via double-buffered playfields.
+
+Pure Fortran reduction and reflection kernels with a fixed, deterministic evaluation order. No BLAS dependency yet — planned Accelerate/AMX backend is tracked in `docs/limitations-and-future.md`.
 
 High-dimensional vector bounce calculations using real64 precision, with deterministic trajectories.
+
+## The metaphor in 30 seconds
+
+A ball (your query embedding) is launched zero-copy through the C ABI
+(`ffi_mod`), bounces against the bumpers (fused cosine kernels in
+`physics_mod`), is played multi-ball against a lane of documents
+(`batch_cosine`), rakes up a score card (`top_k_cosine`), while the
+TILT guard (`telemetry_mod` + `coarray_mod`) watches CPU/memory/
+temperature and NaNs and stops the game before it can produce garbage.
+
+Every arcade element maps to an exact code symbol — see
+`docs/metaphor-guide.md`, or run the narrated tour:
+
+```bash
+fpm run --example metaphor_tour
+```
 
 ## Visual Flow
 
@@ -52,14 +70,16 @@ See `docs/learning-path.md` for the staged study guide. Start with `docs/archite
 
 ## Status
 
-v0.1.0 — educational + usable core. See `docs/limitations-and-future.md`.
+v0.1.1 — corrected kernels + out-of-the-box build; educational + usable core. See `docs/limitations-and-future.md` and `CHANGELOG.md`.
 
 ## Links
 
+- Metaphor guide (start here): `docs/metaphor-guide.md`
 - Architecture: `docs/architecture.md`
 - FFI deep dive: `docs/ffi-explained.md`
 - Physics kernels: `docs/physics-kernels.md`
 - Coarrays & TILT: `docs/coarrays-and-tilt.md`
+- Learning path: `docs/learning-path.md`
 - Strategy: `docs/strategy.md`
 - Roadmap: `docs/roadmap.md`
 
@@ -74,4 +94,9 @@ Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/contribu
 
 ## Arcade Cabinet Specs (Benchmarks)
 
-Run `make test-leaks` to verify zero heap allocations after initialization.
+```bash
+make bench     # C-ABI client against the static library
+make test-leaks  # verify zero heap allocations after initialization
+```
+
+For Python: `make dylib` produces `libbumperfort.dylib` for the ctypes binding (see `bindings/python/README.md`).
