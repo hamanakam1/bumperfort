@@ -14,3 +14,10 @@ jobs:
           gfortran -O3 -ffast-math -c src/*.f90
           gfortran -O3 -ffast-math -o test_bounce test/test_bounce.f90 src/*.f90
           ./test_bounce
+
+  build-pi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: sudo apt-get install -y gcc-aarch64-linux-gnu gfortran-aarch64-linux-gnu
+      - run: aarch64-linux-gnu-gfortran -O3 -static -o bumperfort-pi src/*.f90
