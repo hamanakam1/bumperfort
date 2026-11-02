@@ -72,6 +72,10 @@ See `docs/learning-path.md` for the staged study guide. Start with `docs/archite
 
 v0.1.1 — corrected kernels + out-of-the-box build; educational + usable core. See `docs/limitations-and-future.md` and `CHANGELOG.md`.
 
+## Sensors
+
+Hardware telemetry polling.
+
 ## Links
 
 - Metaphor guide (start here): `docs/metaphor-guide.md`
