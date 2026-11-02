@@ -74,6 +74,10 @@ v0.1.1 — corrected kernels + out-of-the-box build; educational + usable core. 
 
 ## Sensors
 
+## Mesh
+
+Shared memory ring buffer.
+
 Hardware telemetry polling.
 
 ## Links
